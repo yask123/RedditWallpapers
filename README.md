@@ -23,6 +23,12 @@ To select `top hot` `40` wallpapers from `[r/xyz]()` subreddit, and set duration
 ```bash
 $ redditwallpaper -c xyz -sort get_hot -count 40 -time 10
 ```
+#### Run it on startup
 
+Type following command on terminal
+
+```bash
+$ @reboot redditwallpapers
+```
 
 
