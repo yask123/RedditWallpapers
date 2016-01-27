@@ -31,4 +31,13 @@ Type following command on terminal
 $ @reboot redditwallpapers
 ```
 
+#### Stop the script
 
+```bash
+$ ps aux | grep redditwallpapers
+```
+
+then
+```bash
+$ kill PID_NO
+```
