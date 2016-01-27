@@ -32,6 +32,7 @@ $ @reboot redditwallpapers
 ```
 
 #### Stop the script
+Get the `PID_NO` by running: 
 
 ```bash
 $ ps aux | grep redditwallpapers
