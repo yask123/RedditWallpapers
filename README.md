@@ -38,7 +38,7 @@ Get the `PID_NO` by running:
 $ ps aux | grep redditwallpapers
 ```
 
-then
+then run: 
 ```bash
 $ kill PID_NO
 ```
