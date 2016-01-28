@@ -9,5 +9,9 @@ setup(name="redditwallpapers",
 	author_email="yask123@gmail.com",
 	license='MIT',
 	packages=["redditwallpapers"],
+	install_requires=[
+  	  'pillow;,
+          'requests'
+      ],
 	scripts=["bin/redditwallpapers"],
 	zip_safe=False)
