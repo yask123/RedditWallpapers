@@ -35,7 +35,24 @@ $ redditwallpapers -sr EarthPorn -sort get_hot -count 40 -t 10
 ```
 
 ##### Sort methods:
-
+ * 'get_controversial'
+ * 'get_controversial_from_all'
+ * 'get_controversial_from_day'
+ * 'get_controversial_from_hour'
+ * 'get_controversial_from_month'
+ * 'get_controversial_from_week'
+ * 'get_controversial_from_year',
+ * 'get_hot',
+ * 'get_new',
+ * 'get_random_submission', 
+ * 'get_rising', 
+ * 'get_top',
+ * 'get_top_from_all', 
+ * 'get_top_from_day', 
+ * 'get_top_from_hour',
+ * 'get_top_from_month', 
+ * 'get_top_from_week', 
+ * 'get_top_from_year'
 
 #### Run it on startup
 
