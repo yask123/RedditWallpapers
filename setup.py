@@ -11,7 +11,8 @@ setup(name="redditwallpapers",
 	packages=["redditwallpapers"],
 	install_requires=[
   	  'pillow;,
-          'requests'
+          'requests',
+          'praw'
       ],
 	scripts=["bin/redditwallpapers"],
 	zip_safe=False)
