@@ -6,6 +6,12 @@ Automagically sets the top trending, good resolution images on reddit as your de
 
 <img src="http://i.imgur.com/a0EpxUI.jpg"/>
 
+### Installation:
+```bash
+$ pip install redditwallpapers
+```
+
+
 ### Usage:
 ```bash
 $ redditwallpapers
