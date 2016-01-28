@@ -1,4 +1,5 @@
 # Reddit Wallpapers
+#### Beta
 
 Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !!
 
