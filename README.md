@@ -33,6 +33,10 @@ To select `top hot` `40` wallpapers from `r/EarthPorn` subreddit, and set durati
 ```bash
 $ redditwallpapers -sr EarthPorn -sort get_hot -count 40 -t 10
 ```
+
+##### Sort methods:
+
+
 #### Run it on startup
 
 Type following command on terminal
