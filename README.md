@@ -52,6 +52,10 @@ then run:
 ```bash
 $ kill PID_NO
 ```
+## Requirements
+* OSX
+* Python
+* Pillow
 
 ## The MIT License
 > Copyright (c) 2015 Yask Srivastava http://iyask.me
