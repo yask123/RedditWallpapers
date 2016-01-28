@@ -37,11 +37,11 @@ def main():
 
     r = praw.Reddit(user_agent='RedditWallpaper Script by '+get_username())
 
-    sub_reddit = args.sub_reddit
-    sort_method = args.sort_method
-    wall_duration = args.time
-    count = args.count
-
+    sub_reddit = args.sub_reddit[0]
+    sort_method = args.sort_method[0]
+    wall_duration = args.time[0]
+    count = args.count[0]
+    print sub_reddit,sort_method,wall_duration,count
     submissions = getattr(r.get_subreddit(str(sub_reddit)), str(sort_method))(limit= count)
 
 
