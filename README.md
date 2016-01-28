@@ -56,6 +56,7 @@ $ kill PID_NO
 * OSX
 * Python
 * Pillow
+* Praw
 
 ## The MIT License
 > Copyright (c) 2015 Yask Srivastava http://iyask.me
