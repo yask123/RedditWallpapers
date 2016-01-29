@@ -99,7 +99,6 @@ def main():
         elif platform.system() == 'Linux':
             linuxcmd = 'gsettings set org.gnome.desktop.background picture-uri file://' + imagePath
             os.system(linuxcmd)
-            sys.exit()
         else:
             print 'Platform not recognized'
             sys.exit()
