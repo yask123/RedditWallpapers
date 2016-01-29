@@ -1,8 +1,10 @@
 #!/usr/bin/env python 
 import argparse
 import os
+import platform
 import pwd
 import shutil
+import sys
 import time
 
 import praw
@@ -87,9 +89,18 @@ def main():
 
         if fail:
             continue
-
-        osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
-        os.system(osxcmd)
+        if platform.system() == 'Darwin':
+            osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
+            os.system(osxcmd)
+        elif platform.system() == 'Windows':
+            print 'Windows is not yet supported'
+            sys.exit()
+        elif platform.system() == 'Linux':
+            print 'Linux is not yet supported'
+            sys.exit()
+        else:
+            print 'Platform not recognized'
+            sys.exit()
         print 'Done'
 
         i += 1
