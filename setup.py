@@ -10,7 +10,7 @@ setup(name="redditwallpapers",
 	license='MIT',
 	packages=["redditwallpapers"],
 	install_requires=[
-  	  'pillow;,
+  	  'pillow',
           'requests',
           'praw'
       ],
