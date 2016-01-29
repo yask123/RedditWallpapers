@@ -97,7 +97,8 @@ def main():
             SPI_SETDESKWALLPAPER = 20
             ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, imagePath, 3)
         elif platform.system() == 'Linux':
-            print 'Linux is not yet supported'
+            linuxcmd = 'gsettings set org.gnome.desktop.background picture-uri file://' + imagePath
+            os.system(linuxcmd)
             sys.exit()
         else:
             print 'Platform not recognized'
