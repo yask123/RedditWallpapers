@@ -70,9 +70,9 @@ $ ps aux | grep redditwallpapers
 ```
 
 then run: 
-```bash
+`bash
 $ kill PID_NO
-```
+`
 ## Requirements
 * OSX or Windows (Above Windows XP) or Linux (Unity and Gnome Shell (Gnome 3) )
 * Python

@@ -32,10 +32,10 @@ def main():
         help="Sub reddit name, eg earthporn")
     parser.add_argument("-sort", "--sort-method", default="get_top_from_all", type=str, nargs='+',
         help="Sort method , eg: get_hot")
-    parser.add_argument("-t", "--time", type=int, default="5", nargs='+',
+    parser.add_argument("-t", "--time", type=int, default=5, nargs='+',
                         help="Time (in seconds) duration for each wallpaper")
-    parser.add_argument("-count", "--count", type=int, default="10", nargs='+',
-        help="Count of total number of wallpapers to select")
+    parser.add_argument("-count", "--count", type=int, default=10, nargs='+',
+                        help="Count of total number of wallpapers to select")
     args = parser.parse_args()
 
     r = praw.Reddit(user_agent='RedditWallpaper Script by '+get_username())
