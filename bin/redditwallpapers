@@ -24,6 +24,22 @@ def sanitize(link):
 def get_username():
     return pwd.getpwuid( os.getuid() )[ 0 ]
 
+
+def linux_wallpaper(path):
+    de = os.environ.get('DESKTOP_SESSION')
+    if de in ["gnome", "unity", "ubuntu"]:
+        os.system("gsettings set org.gnome.desktop.background picture-uri file://%s" % path)
+    elif de in ["cinnamon"]:
+        os.system("gsettings set org.cinnamon.desktop.background picture-uri file://%s" % path)
+    elif de in ["mate"]:
+        os.system("gsettings set org.mate.background picture-filename '%s'" % path)
+    elif de in ['xfce']:
+        os.system("xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-show -s ''")
+        os.system("xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s '%s'" % path)
+    else:
+        print("Your DE could not be detected to set the wallpaper.")
+        sys.exit(1)
+
 def main():
     description = "Set trending reddit images as wallpapers"
     parser = argparse.ArgumentParser(description = description)
@@ -97,14 +113,15 @@ def main():
         if fail:
             continue
         if platform.system() == 'Darwin':
-            osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
+            # osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
+            osxcmd = 'osascript -e \'tell application "System Events" to set picture of every desktop to "' + imagePath + '" \''
+
             os.system(osxcmd)
         elif platform.system() == 'Windows':
             SPI_SETDESKWALLPAPER = 20
             ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, imagePath, 3)
         elif platform.system() == 'Linux':
-            linuxcmd = 'gsettings set org.gnome.desktop.background picture-uri file://' + imagePath
-            os.system(linuxcmd)
+            linux_wallpaper(imagePath)
         else:
             print 'Platform not recognized'
             sys.exit()
