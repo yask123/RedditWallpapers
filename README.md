@@ -1,7 +1,7 @@
 # Reddit Wallpapers
 #### Beta
 
-Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !!
+Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !
 
 
 <img src="http://i.imgur.com/a0EpxUI.jpg"/>
