@@ -74,7 +74,7 @@ then run:
 $ kill PID_NO
 ```
 ## Requirements
-* OSX
+* OSX or Windows
 * Python
 * Pillow
 * Praw
