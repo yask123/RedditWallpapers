@@ -31,7 +31,7 @@ $ redditwallpapers
 To select `top hot` `40` wallpapers from `r/EarthPorn` subreddit, and set duration for `10` mins
 
 ```bash
-$ redditwallpapers -sr EarthPorn -sort get_hot -count 40 -t 10
+$ redditwallpapers -sr EarthPorn -sort get_top_from_all  -count 40 -t 10
 ```
 
 ##### Sort methods:
