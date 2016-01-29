@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd51a8b5-dacb-4630-8b0a-be2a4a7353ad" name="Default" comment="Fixed issue #6">
+    <list default="true" id="fd51a8b5-dacb-4630-8b0a-be2a4a7353ad" name="Default" comment="Fixed major bug #6">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="redditwallpapers.iws" />
@@ -16,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/redditwallpapers$redditwallpapers.coverage" NAME="redditwallpapers Coverage Results" MODIFIED="1454076939479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
+    <SUITE FILE_PATH="coverage/redditwallpapers$redditwallpapers.coverage" NAME="redditwallpapers Coverage Results" MODIFIED="1454080048276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,8 +30,8 @@
       <file leaf-file-name="redditwallpapers" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/redditwallpapers">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49655172">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.18159807">
+              <caret line="32" column="75" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="75" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -70,8 +70,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="11" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -156,7 +158,6 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -590,11 +591,23 @@
       <option name="project" value="LOCAL" />
       <updated>1454079411645</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed issue #6">
+      <created>1454079507688</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1454079507688</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed major bug #6">
+      <created>1454080497595</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1454080497595</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="11" y="23" width="1280" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -606,7 +619,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -640,7 +653,8 @@
     <MESSAGE value="updated version" />
     <MESSAGE value="Fixed issue $6" />
     <MESSAGE value="Fixed issue #6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue #6" />
+    <MESSAGE value="Fixed major bug #6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed major bug #6" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -728,8 +742,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/redditwallpapers">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49655172">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.18159807">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="75" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
