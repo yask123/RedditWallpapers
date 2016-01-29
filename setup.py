@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(name="redditwallpapers",
-	  version="1.1",
+	  version="1.2",
 	  description="Automatically sets the top trending, good resolution images on reddit as your wallpaper.",
 	  url="https://github.com/yask123/redditwallpapers",
 	  author="Yask Srivastava",
