@@ -16,6 +16,7 @@ try:
 except:
     pass
 
+
 def sanitize(link):
     if 'jpg' in link or 'png' in link:
         return link
@@ -24,8 +25,9 @@ def sanitize(link):
     else:
         raise ValueError('cant sanitize url' + link)
 
+
 def get_username():
-    return pwd.getpwuid( os.getuid() )[ 0 ]
+    return pwd.getpwuid(os.getuid())[0]
 
 
 def linux_wallpaper(path):
@@ -43,14 +45,22 @@ def linux_wallpaper(path):
         print("Your DE could not be detected to set the wallpaper.")
         sys.exit(1)
 
+
+def clean_input(inp):
+    if (isinstance(inp, list)):
+        return inp[0]
+    else:
+        return inp
+
+
 def main():
     description = "Set trending reddit images as wallpapers"
-    parser = argparse.ArgumentParser(description = description)
+    parser = argparse.ArgumentParser(description=description)
 
-    parser.add_argument("-sr", "--sub-reddit", default="EarthPorn",type=str, nargs='+',
-        help="Sub reddit name, eg earthporn")
+    parser.add_argument("-sr", "--sub-reddit", default="EarthPorn", type=str, nargs='+',
+                        help="Sub reddit name, eg earthporn")
     parser.add_argument("-sort", "--sort-method", default="get_top_from_all", type=str, nargs='+',
-        help="Sort method , eg: get_hot")
+                        help="Sort method , eg: get_hot")
     parser.add_argument("-t", "--time", type=int, default=5, nargs='+',
                         help="Time (in seconds) duration for each wallpaper")
     parser.add_argument("-count", "--count", type=int, default=10, nargs='+',
@@ -62,20 +72,13 @@ def main():
     else:
         r = praw.Reddit(user_agent='RedditWallpaper Script by /r/somewindowsuser')
 
-
-    sub_reddit = args.sub_reddit
-    sort_method = args.sort_method
-    wall_duration = args.time
-    count = args.count
-    if isinstance(sub_reddit, list):
-        sub_reddit = sub_reddit[0]
-        sort_method = sort_method[0]
-        wall_duration = wall_duration[0]
-        count = count[0]
+    sub_reddit = clean_input(args.sub_reddit)
+    sort_method = clean_input(args.sort_method)
+    wall_duration = clean_input(args.time)
+    count = clean_input(args.count)
 
     print sub_reddit, sort_method, wall_duration, count
-    submissions = getattr(r.get_subreddit(str(sub_reddit)), str(sort_method))(limit= count)
-
+    submissions = getattr(r.get_subreddit(str(sub_reddit)), str(sort_method))(limit=count)
 
     my_dir = os.path.expanduser('~/.epwallpapers')
 
@@ -98,7 +101,7 @@ def main():
             imgext = url.split('.')[-1]
         except ValueError as e:
             print e
-            i+=1
+            i += 1
             continue
 
         response = requests.get(url, stream=True)
@@ -113,7 +116,7 @@ def main():
             width, height = im.size
             # We only want high resolution images
             if int(width) < 2000 or int(height) < 1300:
-                i+=1
+                i += 1
                 print 'poor pic, failed'
                 fail = True
 
@@ -132,10 +135,12 @@ def main():
         else:
             print 'Platform not recognized'
             sys.exit()
+
+        print 'Setting ' + url + ' as wallpaper'
         print 'Done'
 
         i += 1
-        if i == wcounts -1:
+        if i == wcounts - 1:
             i = 0
         time.sleep(wall_duration * 60)
 
