@@ -112,7 +112,6 @@ def main():
 
         imagePath = my_dir + '/' + str(i) + '.' + imgext
 
-<<<<<<< HEAD
         im = Image.open(imagePath)
         width, height = im.size
         # We only want high resolution images
@@ -120,15 +119,6 @@ def main():
             i+=1
             print 'poor pic, failed'
             fail = True
-=======
-        with Image.open(imagePath) as im:
-            width, height = im.size
-            # We only want high resolution images
-            if int(width) < 2000 or int(height) < 1300:
-                i += 1
-                print 'poor pic, failed'
-                fail = True
->>>>>>> upstream/master
 
         if fail:
             continue
