@@ -3,7 +3,6 @@ import argparse
 import ctypes
 import os
 import platform
-import pwd
 import shutil
 import sys
 import time
@@ -12,6 +11,10 @@ import praw
 import requests
 from PIL import Image
 
+try:
+    import pwd
+except:
+    pass
 
 def sanitize(link):
     if 'jpg' in link or 'png' in link:
@@ -54,7 +57,11 @@ def main():
                         help="Count of total number of wallpapers to select")
     args = parser.parse_args()
 
-    r = praw.Reddit(user_agent='RedditWallpaper Script by '+get_username())
+    if platform.system() == 'Darwin' or platform.system() == 'Linux':
+        r = praw.Reddit(user_agent='RedditWallpaper Script by ' + get_username())
+    else:
+        r = praw.Reddit(user_agent='RedditWallpaper Script by /r/somewindowsuser')
+
 
     sub_reddit = args.sub_reddit
     sort_method = args.sort_method
