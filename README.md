@@ -21,7 +21,7 @@ $ redditwallpapers
 ##### Default Behavior
 
 * It would collect the top 20 rated wallpapers from `/r/EarthPorn` 
-* Select only the high resolutions images one by one and sets them as desktop wallpaper (For a duration of 5 mins)
+* Select only the high resolutions images one by one and sets them as desktop wallpaper (For a duration of 1 min)
 * Keep looping untill you kill the script
 
 

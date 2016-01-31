@@ -61,7 +61,7 @@ def main():
                         help="Sub reddit name, eg earthporn")
     parser.add_argument("-sort", "--sort-method", default="get_top_from_all", type=str, nargs='+',
                         help="Sort method , eg: get_hot")
-    parser.add_argument("-t", "--time", type=int, default=5, nargs='+',
+    parser.add_argument("-t", "--time", type=int, default=1, nargs='+',
                         help="Time (in seconds) duration for each wallpaper")
     parser.add_argument("-count", "--count", type=int, default=10, nargs='+',
                         help="Count of total number of wallpapers to select")
@@ -120,9 +120,7 @@ def main():
             continue
 
         if platform.system() == 'Darwin':
-            # osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
             osxcmd = 'osascript -e \'tell application "System Events" to set picture of every desktop to "' + imagePath + '" \''
-
             os.system(osxcmd)
         elif platform.system() == 'Windows':
             SPI_SETDESKWALLPAPER = 20
