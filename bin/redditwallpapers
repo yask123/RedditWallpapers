@@ -93,7 +93,6 @@ def main():
     wcounts = len(wlinks)
 
     while True:
-        fail = False
         print i
         each = wlinks[i]
         try:
@@ -118,10 +117,8 @@ def main():
         if int(width) < 2000 or int(height) < 1300:
             i+=1
             print 'poor pic, failed'
-            fail = True
-
-        if fail:
             continue
+
         if platform.system() == 'Darwin':
             # osxcmd = 'osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + imagePath + '" \''
             osxcmd = 'osascript -e \'tell application "System Events" to set picture of every desktop to "' + imagePath + '" \''
