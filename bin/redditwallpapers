@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 import argparse
 import ctypes
 import os
@@ -112,13 +112,13 @@ def main():
 
         imagePath = my_dir + '/' + str(i) + '.' + imgext
 
-        with Image.open(imagePath) as im:
-            width, height = im.size
-            # We only want high resolution images
-            if int(width) < 2000 or int(height) < 1300:
-                i += 1
-                print 'poor pic, failed'
-                fail = True
+        im = Image.open(imagePath)
+        width, height = im.size
+        # We only want high resolution images
+        if int(width) < 2000 or int(height) < 1300:
+            i+=1
+            print 'poor pic, failed'
+            fail = True
 
         if fail:
             continue
