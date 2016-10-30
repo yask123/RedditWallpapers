@@ -17,7 +17,7 @@ $ pip install redditwallpapers
 $ redditwallpapers
 ```
 
-#### What it does ?
+#### What it does?
 ##### Default Behavior
 
 * It would collect the top 20 rated wallpapers from `/r/EarthPorn` 
