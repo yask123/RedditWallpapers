@@ -11,6 +11,11 @@ Automagically sets the top trending, good resolution images on reddit as your de
 $ pip install redditwallpapers
 ```
 
+If you're running macOS 10.11+ you may [have to ignore the installed six:](https://github.com/pypa/pip/issues/3165#issuecomment-146666737)
+```bash
+$ pip install --ignore-installed six
+```
+
 
 ### Usage:
 ```bash
