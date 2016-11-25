@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Redditwallpapers : 🐔  Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !!">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Redditwallpapers</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/yask123/RedditWallpapers">View on GitHub</a>
+
+          <h1 id="project_title">Redditwallpapers</h1>
+          <h2 id="project_tagline">🐔  Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !!</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/yask123/RedditWallpapers/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/yask123/RedditWallpapers/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="reddit-wallpapers" class="anchor" href="#reddit-wallpapers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reddit Wallpapers</h1>
+
+<h4>
+<a id="beta" class="anchor" href="#beta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Beta</h4>
+
+<p>Automagically sets the top trending, good resolution images on reddit as your desktop wallpapers, in a loop !</p>
+
+<p><img src="http://i.imgur.com/a0EpxUI.jpg"></p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation:</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ pip install redditwallpapers</pre></div>
+
+<p>If you're running macOS 10.11+ you may <a href="https://github.com/pypa/pip/issues/3165#issuecomment-146666737">have to ignore the installed six:</a></p>
+
+<div class="highlight highlight-source-shell"><pre>$ pip install --ignore-installed six</pre></div>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage:</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ redditwallpapers</pre></div>
+
+<h4>
+<a id="what-it-does" class="anchor" href="#what-it-does" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does?</h4>
+
+<h5>
+<a id="default-behavior" class="anchor" href="#default-behavior" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default Behavior</h5>
+
+<ul>
+<li>It would collect the top 20 rated wallpapers from <code>/r/EarthPorn</code> </li>
+<li>Select only the high resolutions images one by one and sets them as desktop wallpaper (For a duration of 1 min)</li>
+<li>Keep looping untill you kill the script</li>
+</ul>
+
+<h4>
+<a id="customizations" class="anchor" href="#customizations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customizations:</h4>
+
+<p>To select <code>top hot</code> <code>40</code> wallpapers from <code>r/EarthPorn</code> subreddit, and set duration for <code>10</code> mins</p>
+
+<div class="highlight highlight-source-shell"><pre>$ redditwallpapers -sr EarthPorn -sort get_top_from_all  -count 40 -t 10</pre></div>
+
+<h5>
+<a id="sort-methods" class="anchor" href="#sort-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sort methods:</h5>
+
+<ul>
+<li>'get_controversial'</li>
+<li>'get_controversial_from_all'</li>
+<li>'get_controversial_from_day'</li>
+<li>'get_controversial_from_hour'</li>
+<li>'get_controversial_from_month'</li>
+<li>'get_controversial_from_week'</li>
+<li>'get_controversial_from_year'</li>
+<li>'get_hot'</li>
+<li>'get_new'</li>
+<li>'get_random_submission'</li>
+<li>'get_rising'</li>
+<li>'get_top'</li>
+<li>'get_top_from_all'</li>
+<li>'get_top_from_day'</li>
+<li>'get_top_from_hour'</li>
+<li>'get_top_from_month'</li>
+<li>'get_top_from_week'</li>
+<li>'get_top_from_year'</li>
+</ul>
+
+<h4>
+<a id="run-it-on-startup" class="anchor" href="#run-it-on-startup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run it on startup</h4>
+
+<p>Type following command on terminal</p>
+
+<div class="highlight highlight-source-shell"><pre>$ @reboot redditwallpapers</pre></div>
+
+<h4>
+<a id="stop-the-script" class="anchor" href="#stop-the-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stop the script</h4>
+
+<p>Get the <code>PID_NO</code> by running: </p>
+
+<div class="highlight highlight-source-shell"><pre>$ ps aux <span class="pl-k">|</span> grep redditwallpapers</pre></div>
+
+<p>then run: 
+<code>bash
+$ kill PID_NO
+</code></p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>OSX or Windows (Above Windows XP) [WIP] or Linux (Unity and Gnome Shell (Gnome 3) ) [WIP]</li>
+<li>Python</li>
+<li>Pillow</li>
+<li>Praw</li>
+</ul>
+
+<h2>
+<a id="the-mit-license" class="anchor" href="#the-mit-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The MIT License</h2>
+
+<blockquote>
+<p>Copyright (c) 2015 Yask Srivastava <a href="http://iyask.me">http://iyask.me</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+</blockquote>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Redditwallpapers maintained by <a href="https://github.com/yask123">yask123</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
