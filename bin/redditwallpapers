@@ -102,6 +102,8 @@ def main():
         except ValueError as e:
             print e
             i += 1
+            if i >= wcounts:
+                i = 0
             continue
 
         response = requests.get(url, stream=True)
@@ -136,7 +138,7 @@ def main():
         print 'Done'
 
         i += 1
-        if i == wcounts - 1:
+        if i >= wcounts - 1:
             i = 0
         time.sleep(wall_duration * 60)
 
